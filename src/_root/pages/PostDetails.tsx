@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useDeletePost, useGetPostById } from '@/lib/react-query/queriesAndMutations'
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Loader from '@/src/components/shared/Loader';

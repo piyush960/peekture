@@ -1,4 +1,4 @@
-import { formatDateString, multiFormatDateString } from '@/lib/utils';
+import { multiFormatDateString } from '@/lib/utils';
 import { useUserContext } from '@/src/context/AuthContext';
 import { Models } from 'appwrite';
 import { Link } from 'react-router-dom';

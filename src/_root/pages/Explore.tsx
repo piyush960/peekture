@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Input } from '@/components/ui/input'
 import SearchResults from '@/src/components/shared/SearchResults';
 import GridPostList from '@/src/components/shared/GridPostList';
@@ -30,7 +30,7 @@ const Explore = () => {
   }
 
   const shouldShowSearchResults = searchValue !== '';
-  const shouldShowPosts = !shouldShowSearchResults && posts.pages.every((item) => item.documents.length === 0);
+  const shouldShowPosts = !shouldShowSearchResults && posts.pages.every((item) => item?.documents.length === 0);
 
   console.log(shouldShowPosts);
 

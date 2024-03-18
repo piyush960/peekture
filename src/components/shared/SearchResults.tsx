@@ -1,5 +1,5 @@
-import React from 'react'
-import { Models } from 'appwrite';
+
+
 import Loader from './Loader';
 import GridPostList from './GridPostList';
 

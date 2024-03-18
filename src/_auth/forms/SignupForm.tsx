@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from "react-hook-form"
@@ -19,11 +19,11 @@ const SignupForm = () => {
 
   const navigate = useNavigate();
 
-  const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
+  const { checkAuthUser } = useUserContext();
 
   const { mutateAsync: createUserAccount, isPending: isCreatingUser } = useCreateUserAccount();
 
-  const { mutateAsync: signInAccount, isPending: isSigningIn} = useSignInAccount();
+  const { mutateAsync: signInAccount } = useSignInAccount();
 
   // 1. Define your form.
   const form = useForm<z.infer<typeof SignupValidation>>({
