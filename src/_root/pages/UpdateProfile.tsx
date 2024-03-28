@@ -176,7 +176,7 @@ const UpdateProfile = () => {
               <Button
                 type="button"
                 className="shad-button_dark_4"
-                onClick={() => navigate(-1)}>
+                onClick={() => navigate(`/profile/${id}`)}>
                 Cancel
               </Button>
               <Button
