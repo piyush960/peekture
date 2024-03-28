@@ -13,7 +13,7 @@ import { Models } from 'appwrite'
 import { useCreatePost, useUpdatePost } from '@/lib/react-query/queriesAndMutations'
 import { useUserContext } from '@/src/context/AuthContext'
 import { toast } from '@/components/ui/use-toast'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Loader from '../shared/Loader'
 
 type PostFormProps = {
@@ -144,7 +144,9 @@ const PostForm = ({ post, action }: PostFormProps) => {
           )}
         />
         <div className='flex gap-4 items-center justify-end'>
-          <Button type="button" className='shad-button_dark_4'>Cancel</Button>
+          <Link to={`/`} >
+            <Button type="button" className='shad-button_dark_4'>Cancel</Button>
+          </Link>
           <Button type="submit" className='shad-button_primary whitespace-nowrap'
           disabled={isLoadingCreate || isLoadingUpdate}
           >

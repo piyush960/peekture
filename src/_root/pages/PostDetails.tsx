@@ -16,6 +16,7 @@ const PostDetails = () => {
   const { mutate: deletePost, isPending: isDeletingPost } = useDeletePost();
 
   const handleDeletePost = () => {
+    console.log(post?.imageId);
     deletePost({ postId: post?.$id || '', imageId: post?.imageId })
     navigate('/')
   }
